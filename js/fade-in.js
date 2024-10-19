@@ -4,8 +4,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (navigationType === 'navigate' || navigationType === 'reload') {
     } else if (navigationType === 'back-forward') {
-        // Page loaded from the cache, reload
-        location.reload(true);
+        // Open the current page in a new tab (Tab B)
+        const newTab = window.open(window.location.href, '_blank');
+
+        // Check if the new tab was successfully created
+        if (newTab) {
+            // Close the current tab (Tab A)
+            window.close();
+        } else {
+            alert("Pop-up blocked. Please allow pop-ups for this site.");
+        }
     }
 
     const elements = document.querySelectorAll('.fade-in');

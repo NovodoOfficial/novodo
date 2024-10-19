@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('pageshow', (event) => {
     const elements = document.querySelectorAll('.fade-in');
     
     function fadeInElements(index) {

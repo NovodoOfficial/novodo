@@ -10,5 +10,10 @@ window.addEventListener('pageshow', (event) => {
         }
     }
     
+    // Always reset the classes when the page is shown
+    elements.forEach(el => {
+        el.classList.remove('animate-fade-in'); // Reset for fade-in
+    });
+
     fadeInElements(0); // Start the fading in process
 });

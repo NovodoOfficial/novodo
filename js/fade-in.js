@@ -1,6 +1,8 @@
 window.addEventListener('pageshow', (event) => {
     const elements = document.querySelectorAll('.fade-in');
     
+    console.log('Pageshow event fired', { cached: event.persisted, elements });
+
     function fadeInElements(index) {
         if (index < elements.length) {
             setTimeout(() => {
@@ -15,5 +17,7 @@ window.addEventListener('pageshow', (event) => {
         el.classList.remove('animate-fade-in'); // Reset for fade-in
     });
 
-    fadeInElements(0); // Start the fading in process
+    if (elements.length > 0) {
+        fadeInElements(0); // Start the fading in process
+    }
 });

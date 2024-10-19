@@ -4,6 +4,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function fadeInElements(index) {
         if (index < elements.length) {
             setTimeout(() => {
+                // Remove the class before adding it again to restart the animation
+                elements[index].classList.remove('animate-fade-in');
+                void elements[index].offsetWidth; // Trigger reflow
                 elements[index].classList.add('animate-fade-in');
                 fadeInElements(index + 1); // Call the next element
             }, 50); // Delay for each element

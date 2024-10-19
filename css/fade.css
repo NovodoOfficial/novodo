@@ -1,17 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.fade-in');
-    
-    function fadeInElements(index) {
-        if (index < elements.length) {
-            setTimeout(() => {
-                // Remove the class before adding it again to restart the animation
-                elements[index].classList.remove('animate-fade-in');
-                void elements[index].offsetWidth; // Trigger reflow
-                elements[index].classList.add('animate-fade-in');
-                fadeInElements(index + 1); // Call the next element
-            }, 50); // Delay for each element
-        }
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
     }
-    
-    fadeInElements(0); // Start the fading in process
-});
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.fade-in {
+    opacity: 0;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}

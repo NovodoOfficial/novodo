@@ -1,0 +1,130 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 300vh;
+    padding: 0;
+    margin: 0;
+    background-color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.content img {
+    width: 100%;
+    border-radius: 25px;
+    display: block;
+}
+
+.content {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.split {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.split h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 50px;
+}
+
+.split p {
+    text-align: center;
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.split hr {
+    height: 4px;
+    width: 100%;
+    border: none;
+    background-color: white;
+    border-radius: 2px;
+    margin: 20px 0;
+}
+
+.split .side {
+    width: calc(50% - 10px);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    min-width: 250px;
+    width: 600px;
+    max-width: 750px;
+    flex-grow: 1;
+}
+
+.glow {
+    display: inline;
+    color: rgb(255, 255, 177);
+    text-shadow: 0 0 10px yellow;
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.glow:hover {
+    text-shadow: 0 0 10px lightblue;
+    color: lightblue;
+}
+
+.brand-color {
+    color: #78b42b;
+    display: inline;
+}
+
+.list ul {
+    width: 100%;
+    list-style: none; /* Remove default markers */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.list li {
+    font-size: 20px;
+    position: relative; /* Position relative for absolute positioning of circles */
+    padding-left: 20px; /* Increased padding for space */
+    margin-bottom: 10px; /* Optional: space between list items */
+    margin-top: 10px; /* Optional: space between list items */
+}
+
+.list li:before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    left: 0; /* Align it to the left */
+    top: 0; /* Center vertically */
+    transform: translateY(50%); /* Adjust position */
+    width: 10px; /* Circle diameter */
+    height: 10px; /* Circle diameter */
+    border-radius: 50%; /* Make it circular */
+    background-color: white; /* Circle color */
+}
+
+.list ul ul {
+    padding-left: 20px; /* Indent nested lists further */
+}
+
+.list {
+    width: max-content;
+}
+
+.lists {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}

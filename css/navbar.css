@@ -10,7 +10,7 @@ nav {
     align-items: center;
     align-content: center;
     border: 2px solid rgba(255, 255, 255, 0.18);
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
     z-index: 1000;
     overflow-x: scroll;
     overflow-y: hidden;

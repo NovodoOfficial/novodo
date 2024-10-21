@@ -27,7 +27,7 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    align-items: center;
+    /* align-items: center; */
     align-content: center;
     justify-content: center;
 }
@@ -87,8 +87,8 @@ body {
 .list ul {
     width: 100%;
     list-style: none; /* Remove default markers */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    padding: 0;
+    margin: 0;
 }
 
 .list li {
@@ -97,6 +97,11 @@ body {
     padding-left: 20px; /* Increased padding for space */
     margin-bottom: 10px; /* Optional: space between list items */
     margin-top: 10px; /* Optional: space between list items */
+    transition: font-size 0.3s ease-in-out;
+}
+
+.list li:hover {
+    font-size: 24px;
 }
 
 .list li:before {
@@ -116,14 +121,29 @@ body {
 }
 
 .list {
-    width: max-content;
+    flex-grow: 1;
+    width: 100%;
+    background-color: #333;
+    border-radius: 15px;
+    padding: 0 50px;
+    margin: 20px 0;
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    transition: transform 0.3s ease-in-out;
+    max-height: min-content;
+}
+
+.list:hover {
+    transform: rotateX(10deg) rotateY(10deg) rotateZ(0deg);
 }
 
 .lists {
     display: flex;
+    flex-direction: column;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     align-content: center;
+    width: 85%;
+    max-width: 85%;
 }

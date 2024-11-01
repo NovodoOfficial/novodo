@@ -52,6 +52,9 @@ hr {
     width: 75%;
     border: solid #555 2px;
     background-color: #444;
+    background-image: url('../images/Carbon.png');
+    background-repeat: repeat;
+    background-size: 20px;
     border-radius: 10px;
     padding: 20px;
 }

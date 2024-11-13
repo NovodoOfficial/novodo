@@ -33,7 +33,7 @@ a {
     color: #78b42b;
     text-decoration: none;
     font-size: 20px;
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease;
     margin: 10px 0;
     font-weight: bold;
 }

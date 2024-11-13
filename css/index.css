@@ -27,7 +27,6 @@ body {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    /* align-items: center; */
     align-content: center;
     justify-content: center;
 }
@@ -71,7 +70,7 @@ body {
     display: inline;
     color: rgb(255, 255, 177);
     text-shadow: 0 0 10px yellow;
-    transition: all 0.3s ease; /* Smooth transition */
+    transition: all 0.3s ease;
 }
 
 .glow:hover {
@@ -86,33 +85,33 @@ body {
 
 .list ul {
     width: 100%;
-    list-style: none; /* Remove default markers */
+    list-style: none;
     padding: 0;
     margin: 0;
 }
 
 .list li {
     font-size: 20px;
-    position: relative; /* Position relative for absolute positioning of circles */
-    padding-left: 20px; /* Increased padding for space */
-    margin-bottom: 10px; /* Optional: space between list items */
-    margin-top: 10px; /* Optional: space between list items */
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .list li:before {
-    content: ""; /* Create a pseudo-element */
-    position: absolute; /* Position it absolutely */
-    left: 0; /* Align it to the left */
-    top: 0; /* Center vertically */
-    transform: translateY(50%); /* Adjust position */
-    width: 10px; /* Circle diameter */
-    height: 10px; /* Circle diameter */
-    border-radius: 50%; /* Make it circular */
-    background-color: white; /* Circle color */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
 }
 
 .list ul ul {
-    padding-left: 20px; /* Indent nested lists further */
+    padding-left: 20px;
 }
 
 .list {

@@ -66,3 +66,22 @@ nav img {
     width: 18px;
     height: 18px;
 }
+
+.footer {
+    margin-top: 250px;
+    min-height: 50px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #78b42b;
+}
+
+.footer p {
+    text-align: center;
+}
+
+.footer a {
+    text-decoration: none;
+}

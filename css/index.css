@@ -16,6 +16,13 @@ body {
     display: block;
 }
 
+.content video {
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    display: block;
+}
+
 .content {
     margin: 20px;
     display: flex;

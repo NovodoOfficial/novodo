@@ -1,3 +1,7 @@
+.content {
+    min-height: 100vh;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -68,9 +72,9 @@ nav img {
 }
 
 .footer {
-    margin-top: 250px;
+    margin: -20px;
+    margin-top: 150px;
     min-height: 50px;
-    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;

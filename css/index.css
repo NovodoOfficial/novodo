@@ -64,14 +64,9 @@
 
 .glow {
     display: inline;
-    color: rgb(255, 255, 177);
-    text-shadow: 0 0 10px yellow;
+    color: #cbff86;
+    text-shadow: 0 0 10px #598d15;
     transition: all 0.3s ease;
-}
-
-.glow:hover {
-    text-shadow: 0 0 10px lightblue;
-    color: lightblue;
 }
 
 .brand-color {

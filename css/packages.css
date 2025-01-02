@@ -27,7 +27,7 @@
     font-size: 50px;
 }
 
-.split p {
+p {
     text-align: center;
     margin: 0;
     font-size: 20px;
@@ -71,4 +71,16 @@
 .brand-color {
     color: #78b42b;
     display: inline;
+}
+
+.content a {
+    text-decoration: none;
+    color: #00bfff;
+    font-size: 20px;
+    text-align: center;
+    transition: color 0.25s ease-in-out;
+}
+
+a:hover {
+    color: white;
 }

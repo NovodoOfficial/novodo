@@ -28,7 +28,7 @@ hr {
 }
 
 .brand-color {
-    color: #78b42b;
+    color: var(--nov);
     display: inline;
 }
 
@@ -62,5 +62,5 @@ hr {
 
 a.inline {
     text-decoration: none;
-    color: #00bfff;
+    color: var(--link);
 }

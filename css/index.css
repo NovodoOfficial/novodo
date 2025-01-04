@@ -64,13 +64,13 @@
 
 .glow {
     display: inline;
-    color: #cbff86;
-    text-shadow: 0 0 10px #598d15;
+    color: var(--glow);
+    text-shadow: 0 0 10px var(--glowshadow);
     transition: all 0.3s ease;
 }
 
 .brand-color {
-    color: #78b42b;
+    color: var(--nov);
     display: inline;
 }
 
@@ -109,7 +109,7 @@
     flex-grow: 1;
     width: 100%;
     background-color: #333;
-    background-image: url('../images/Carbon.png');
+    background-image: var(--carbon);
     background-repeat: repeat;
     background-size: 20px;
     border-radius: 15px;

@@ -10,15 +10,7 @@
     <priority>1.00</priority>
 </url>
 <url>
-    <loc>https://www.novodo.co.uk/about</loc>
-    <priority>0.80</priority>
-</url>
-<url>
     <loc>https://www.novodo.co.uk/free</loc>
-    <priority>0.80</priority>
-</url>
-<url>
-    <loc>https://www.novodo.co.uk/pro</loc>
     <priority>0.80</priority>
 </url>
 <url>

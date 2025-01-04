@@ -30,7 +30,7 @@ p {
 }
 
 .content a {
-    color: #78b42b;
+    color: var(--nov);
     text-decoration: none;
     font-size: 20px;
     transition: all 0.3s ease;

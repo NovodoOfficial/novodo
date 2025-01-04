@@ -3,14 +3,28 @@
     src: url("../fonts/gabarito.ttf");
 }
 
+:root{
+    --background: #71B51B;
+    --text: white;
+    --glow: white;
+    --glowshadow: white;
+    --nov: white;
+    --carbon: url('../images/Carbon.png');
+    --link: #003de6;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root{
+        --background: #1a1a1a;
+        --glow: #cbff86;
+        --glowshadow: #598d15;
+        --link: #00bfff;
+    }
+}
+
 html {
     scroll-behavior: smooth;
 }
-
-* {
-    cursor: none;
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -18,8 +32,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Gabarito", sans-serif;
-    color: white;
-    background-color: #1a1a1a;
+    color: var(--text);
+    background-color: var(--background);
     min-height: 100dvh;
 }
 
@@ -104,7 +118,7 @@ nav img {
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: #78b42b;
+    background-color: var(--background);
 }
 
 .footer p {

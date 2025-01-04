@@ -69,13 +69,13 @@ p {
 }
 
 .brand-color {
-    color: #78b42b;
+    color: var(--nov);
     display: inline;
 }
 
 .content a {
     text-decoration: none;
-    color: #00bfff;
+    color: var(--link);
     font-size: 20px;
     text-align: center;
     transition: color 0.25s ease-in-out;

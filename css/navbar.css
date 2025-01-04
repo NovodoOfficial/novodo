@@ -11,30 +11,6 @@ html {
     cursor: none;
 }
 
-#follower {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    background: white;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-}
-
-#cursorMarker {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #78b42b;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s ease-out;
-}
-
 body {
     display: flex;
     flex-direction: column;

@@ -58,14 +58,9 @@ p {
 
 .glow {
     display: inline;
-    color: rgb(255, 255, 177);
+    color: var(--glow);
     text-shadow: 0 0 10px yellow;
     transition: all 0.3s ease;
-}
-
-.glow:hover {
-    text-shadow: 0 0 10px lightblue;
-    color: lightblue;
 }
 
 .brand-color {

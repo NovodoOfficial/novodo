@@ -133,7 +133,3 @@ nav img {
     font-size: normal;
     transition: color 0.25s ease-in-out, text-shadow 0.25s ease-in-out;
 }
-
-.footer a:hover {
-    color: lightblue;
-}

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
     const redirectUrl = urlParams.get('url');
     const urlMap = {
-        "dc": "https://discord.com/invite/TMWuXqJR6T",
+        "dc": "https://www.dsc.gg/novodo",
         "yt": "https://www.youtube.com/@NovodoOfficial"
     };
 

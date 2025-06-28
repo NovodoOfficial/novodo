@@ -1,0 +1,3 @@
+[submodule "devicelist"]
+	path = devicelist
+	url = https://github.com/NovodoOfficial/devicelist.git

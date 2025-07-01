@@ -1,15 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     const urlParams = new URLSearchParams(window.location.search);
-    const redirectUrl = urlParams.get('url');
+    const redirectKey = urlParams.get("url");
     const urlMap = {
-        "dc": "https://www.dsc.gg/novodo",
-        "yt": "https://www.youtube.com/@NovodoOfficial"
+        dc: "https://www.dsc.gg/novodo",
+        yt: "https://www.youtube.com/@NovodoOfficial",
     };
 
-    let targetUrl = redirectUrl ? urlMap[redirectUrl] || redirectUrl : null;
+    let targetUrl =
+        redirectKey && urlMap.hasOwnProperty(redirectKey)
+            ? urlMap[redirectKey]
+            : null;
 
     if (!targetUrl) {
-        document.getElementById("redirect-message").textContent = "No redirect URL was provided, try again later";
+        document.getElementById("redirect-message").textContent =
+            "No valid redirect URL was provided.";
         const loadingDots = document.querySelector(".loading-dots");
         if (loadingDots) {
             loadingDots.remove();
@@ -18,8 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
         h1Element.textContent = "Failed";
         h1Element.style.textAlign = "center";
         h1Element.style.justifyContent = "center";
-        document.querySelector(".loader-text p").textContent = "The redirect has failed";
-        document.getElementById("back-button").style.display = "block";
+        document.querySelector(".loader-text p").textContent =
+            "The redirect has failed";
+        document.getElementById("back-button").style.display =
+            "block";
         return;
     }
 
@@ -31,7 +37,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (countdown <= 0) {
             clearInterval(interval);
             countdownElement.textContent = "now";
-            document.getElementById("redirect-message").textContent = `Redirecting to ${targetUrl} now`;
+            document.getElementById(
+                "redirect-message"
+            ).textContent = `Redirecting to ${targetUrl} now`;
             window.location.href = targetUrl;
         } else {
             countdownElement.textContent = countdown.toFixed(1);

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# SETUP THE PRE-COMMIT HOOK:
+# git config core.hooksPath .githooks
+
+echo "Updating devicelist submodule..."
+git submodule update --remote --merge
+git add devicelist
+echo "devicelist submodule updated."
+
+echo "Getting install script for Packages"
+mkdir -p ./install
+
+URL="https://raw.githubusercontent.com/NovodoOfficial/novodo-packages/refs/heads/main/install.sh"
+
+if ! curl -fsSL "$URL" -o ./install/packages.sh; then
+    echo "FAILED TO DOWNLOAD PACKAGES INSTALL SCRIPT FROM $URL" >&2
+    exit 1
+fi
+
+echo "Downloaded packages install script to ./install/packages.sh"

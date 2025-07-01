@@ -12,10 +12,22 @@ echo "Getting install script for Packages"
 mkdir -p ./install
 
 URL="https://raw.githubusercontent.com/NovodoOfficial/novodo-packages/main/install.sh"
+TARGET="./install/packages.sh"
 
-if ! curl -fsSL "$URL" -o ./install/packages.sh; then
-    echo "FAILED TO DOWNLOAD PACKAGES INSTALL SCRIPT FROM $URL" >&2
-    exit 1
+echo "Trying to download install script from $URL..."
+if curl -fsSL "$URL" -o "$TARGET"; then
+    echo "Downloaded packages install script to $TARGET"
+else
+    echo "WARNING: Failed to download install script from $URL"
+    echo "Keeping existing $TARGET if it exists."
+    if [ ! -f "$TARGET" ]; then
+        echo "#!/bin/bash" > "$TARGET"
+        echo "# Empty install script placeholder." >> "$TARGET"
+        echo "Created empty $TARGET"
+    fi
 fi
 
-echo "Downloaded packages install script to ./install/packages.sh"
+git add "$TARGET"
+echo "Added $TARGET to the commit"
+
+exit 0

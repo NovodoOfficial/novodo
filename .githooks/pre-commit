@@ -11,7 +11,7 @@ echo "devicelist submodule updated."
 echo "Getting install script for Packages"
 mkdir -p ./install
 
-URL="https://raw.githubusercontent.com/NovodoOfficial/novodo-packages/refs/heads/main/install.sh"
+URL="https://raw.githubusercontent.com/NovodoOfficial/novodo-packages/main/install.sh"
 
 if ! curl -fsSL "$URL" -o ./install/packages.sh; then
     echo "FAILED TO DOWNLOAD PACKAGES INSTALL SCRIPT FROM $URL" >&2

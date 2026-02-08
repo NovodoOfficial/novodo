@@ -8,26 +8,26 @@
 #git add devicelist
 #echo "devicelist submodule updated."
 
-echo "Getting install script for Packages"
-mkdir -p ./install
+# echo "Getting install script for Packages"
+# mkdir -p ./install
 
-URL="https://raw.githubusercontent.com/NovodoOfficial/novodo-packages/main/install.sh"
-TARGET="./install/packages.sh"
+# URL="https://raw.githubusercontent.com/NovodoOfficial/novodo-packages/main/install.sh"
+# TARGET="./install/packages.sh"
 
-echo "Trying to download install script from $URL..."
-if curl -fsSL "$URL" -o "$TARGET"; then
-    echo "Downloaded packages install script to $TARGET"
-else
-    echo "WARNING: Failed to download install script from $URL"
-    echo "Keeping existing $TARGET if it exists."
-    if [ ! -f "$TARGET" ]; then
-        echo "#!/bin/bash" > "$TARGET"
-        echo "# Empty install script placeholder." >> "$TARGET"
-        echo "Created empty $TARGET"
-    fi
-fi
+# echo "Trying to download install script from $URL..."
+# if curl -fsSL "$URL" -o "$TARGET"; then
+#     echo "Downloaded packages install script to $TARGET"
+# else
+#     echo "WARNING: Failed to download install script from $URL"
+#     echo "Keeping existing $TARGET if it exists."
+#     if [ ! -f "$TARGET" ]; then
+#         echo "#!/bin/bash" > "$TARGET"
+#         echo "# Empty install script placeholder." >> "$TARGET"
+#         echo "Created empty $TARGET"
+#     fi
+# fi
 
-git add "$TARGET"
-echo "Added $TARGET to the commit"
+# git add "$TARGET"
+# echo "Added $TARGET to the commit"
 
-exit 0
+# exit 0

@@ -3,10 +3,10 @@
 # SETUP THE PRE-COMMIT HOOK:
 # git config core.hooksPath .githooks
 
-echo "Updating devicelist submodule..."
-git submodule update --remote --merge
-git add devicelist
-echo "devicelist submodule updated."
+#echo "Updating devicelist submodule..."
+#git submodule update --remote --merge
+#git add devicelist
+#echo "devicelist submodule updated."
 
 echo "Getting install script for Packages"
 mkdir -p ./install

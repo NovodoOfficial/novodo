@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HID Color Sender</title>
+  </head>
+  <body>
+    <input type="color" id="colorPicker" value="#0000ff" />
+    <button id="applyBtn">Apply</button>
+
+    <script>
+      const VID = 0x1209;
+      const PID = 0x0001;
+
+      let device = null;
+
+      function hexToRgb(hex) {
+        const n = parseInt(hex.slice(1), 16);
+        return [(n >> 16) & 0xff, (n >> 8) & 0xff, n & 0xff];
+      }
+
+      async function getDevice() {
+        if (device && device.opened) return device;
+
+        const devices = await navigator.hid.requestDevice({
+          filters: [{ vendorId: VID, productId: PID }],
+        });
+
+        if (!devices.length) throw new Error("No device selected");
+
+        device = devices[0];
+        await device.open();
+        return device;
+      }
+
+      document.getElementById("applyBtn").onclick = async () => {
+        try {
+          const dev = await getDevice();
+
+          const rgb = hexToRgb(document.getElementById("colorPicker").value);
+
+          const data = new Uint8Array(rgb);
+          await dev.sendFeatureReport(1, data);
+
+          console.log("Color sent:", rgb);
+        } catch (e) {
+          console.error(e);
+        }
+      };
+    </script>
+  </body>
+</html>

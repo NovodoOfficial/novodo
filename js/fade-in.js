@@ -1,33 +1,21 @@
 function resetBodyStyles() {
-    document.body.classList.remove('fade-out');
-    document.body.style.opacity = '1';
+  document.body.classList.remove("fade-out");
+  document.body.style.opacity = "1";
 }
 
 resetBodyStyles();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const elements = document.querySelectorAll('.fade-in');
+document.addEventListener("DOMContentLoaded", () => {
+  const elements = document.querySelectorAll(".fi");
 
-    function fadeInElements(index) {
-        if (index < elements.length) {
-            setTimeout(() => {
-                elements[index].classList.add('animate-fade-in');
-                fadeInElements(index + 1);
-            }, 50);
-        }
+  function fadeInElements(index) {
+    if (index < elements.length) {
+      setTimeout(() => {
+        elements[index].classList.add("animate-fade-in");
+        fadeInElements(index + 1);
+      }, 250);
     }
+  }
 
-    fadeInElements(0);
-});
-
-document.getElementById('backArrow').addEventListener('click', () => {
-    resetBodyStyles();
-    const elements = document.querySelectorAll('.fade-in');
-
-    elements.forEach(element => {
-        element.classList.remove('animate-fade-in');
-        element.classList.add('fade-in');
-    });
-
-    fadeInElements(0);
+  fadeInElements(0);
 });
